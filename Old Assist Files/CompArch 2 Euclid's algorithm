@@ -1,0 +1,50 @@
+__relPrime:
+	addi $sp, -4				//allocate space for the stack
+	sto  $t0, $sp
+	addi $sp, -4				
+	sto  $ra, $sp 				//This stores the return address
+	addi $t1, 2 				//int m = 2
+	addi $t3, 1
+WHILE:
+	jal gcd
+	beq  $v0, $t3, DONE
+	addi $t1, 1
+	j WHILE
+DONE:
+	sto  $t1, $v0
+	sto  $sp, $ra
+	addi $sp, 4
+	sto  $sp, $t0
+	addi $sp, 4
+	j $ra
+
+
+
+
+__gcd:
+	sub $t3,$t3					//this creates a zero register in this function
+	bne $t0, 0, WHILE    		//sub $at, $at
+								 //b   101, SKIP
+	sto $t1,$v0
+	Jr $ra
+WHILE:
+	beq $t1, $t3, SKIP2
+	bgt $t0, $t2 ELSE
+	sub $t0, $t1
+	j WHILE
+ELSE:
+	sub $t1, $t0
+	j WHILE
+SKIP2:
+	sto $t0, $v0
+	jr $ra
+
+
+
+
+__LoadUpperImmediate:
+	lui $t3, 0xff
+	ori $t3, 0xff
+	sto $t3, $v0
+	j 	$ra
+
