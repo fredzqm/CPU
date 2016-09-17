@@ -1,0 +1,28 @@
+
+
+
+// Instantiate the module
+ControlUnit instance_name (
+    .Op(Op), 
+    .LMC(LMC), 
+    .Perform(Perform), 
+    .CLK(CLK), 
+    .RESET(RESET), 
+    .PCW(PCW), 
+    .Jump(Jump), 
+    .MW(MW), 
+    .LM(LM), 
+    .IW(IW), 
+    .IorD(IorD), 
+    .MSrc(MSrc), 
+    .RW(RW), 
+    .RWSrc(RWSrc), 
+    .ALUOp(ALUOp), 
+    .SrcB(SrcB), 
+    .FU(FU), 
+    .SPW(SPW), 
+    .SPIorD(SPIorD), 
+    .s(s)
+    );
+
+

@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+ALU instance_name (
+    .a(a), 
+    .b(b), 
+    .CLK(CLK), 
+    .ALUOp(ALUOp), 
+    .ALUOut(ALUOut)
+    );
+
+

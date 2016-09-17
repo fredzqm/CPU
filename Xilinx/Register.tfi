@@ -1,0 +1,12 @@
+
+
+
+// Instantiate the module
+Register instance_name (
+    .D(D), 
+    .EN(EN), 
+    .Q(Q), 
+    .CLK(CLK)
+    );
+
+

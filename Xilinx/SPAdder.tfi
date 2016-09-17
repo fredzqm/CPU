@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+SPAdder instance_name (
+    .SP(SP), 
+    .IorD(IorD), 
+    .newSP(newSP)
+    );
+
+

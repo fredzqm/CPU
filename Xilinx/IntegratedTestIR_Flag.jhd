@@ -1,0 +1,5 @@
+MODULE IntegratedTestIR_Flag
+	SUBMODULE Flag
+		INSTANCE XLXI_168
+	SUBMODULE InstructionRegister
+		INSTANCE XLXI_169

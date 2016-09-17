@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+SP instance_name (
+    .D(D), 
+    .SP(SP), 
+    .CE(CE), 
+    .PRESET(PRESET), 
+    .CLK(CLK)
+    );
+
+

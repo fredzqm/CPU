@@ -1,0 +1,384 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : hex4.vf
+// /___/   /\     Timestamp : 11/09/2015 19:20:10
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/hex4.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/lcdDisplayRotaryCounter/hex4.sch
+//Design Name: hex4
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module D2_4E_MXILINX_hex4(A0, 
+                          A1, 
+                          E, 
+                          D0, 
+                          D1, 
+                          D2, 
+                          D3);
+
+    input A0;
+    input A1;
+    input E;
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+   
+   
+   AND3  I_36_30 (.I0(A1), 
+                 .I1(A0), 
+                 .I2(E), 
+                 .O(D3));
+   AND3B1  I_36_31 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D2));
+   AND3B1  I_36_32 (.I0(A1), 
+                   .I1(A0), 
+                   .I2(E), 
+                   .O(D1));
+   AND3B2  I_36_33 (.I0(A0), 
+                   .I1(A1), 
+                   .I2(E), 
+                   .O(D0));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1B1_MXILINX_hex4(D0, 
+                           D1, 
+                           S0, 
+                           O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B2  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_hex4(D0, 
+                         D1, 
+                         S0, 
+                         O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1  I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2  I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2  I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module FTCLEX_MXILINX_hex4(C, 
+                           CE, 
+                           CLR, 
+                           D, 
+                           L, 
+                           T, 
+                           Q);
+
+   parameter INIT = 1'b0;
+   
+    input C;
+    input CE;
+    input CLR;
+    input D;
+    input L;
+    input T;
+   output Q;
+   
+   wire MD;
+   wire TQ;
+   wire Q_DUMMY;
+   
+   assign Q = Q_DUMMY;
+   (* HU_SET = "I_36_30_18" *) 
+   M2_1_MXILINX_hex4  I_36_30 (.D0(TQ), 
+                              .D1(D), 
+                              .S0(L), 
+                              .O(MD));
+   XOR2  I_36_32 (.I0(T), 
+                 .I1(Q_DUMMY), 
+                 .O(TQ));
+   (* RLOC = "X0Y0" *) 
+   FDCE  I_36_35 (.C(C), 
+                 .CE(CE), 
+                 .CLR(CLR), 
+                 .D(MD), 
+                 .Q(Q_DUMMY));
+endmodule
+`timescale 1ns / 1ps
+
+module CB4CLED_MXILINX_hex4(C, 
+                            CE, 
+                            CLR, 
+                            D0, 
+                            D1, 
+                            D2, 
+                            D3, 
+                            L, 
+                            UP, 
+                            CEO, 
+                            Q0, 
+                            Q1, 
+                            Q2, 
+                            Q3, 
+                            TC);
+
+    input C;
+    input CE;
+    input CLR;
+    input D0;
+    input D1;
+    input D2;
+    input D3;
+    input L;
+    input UP;
+   output CEO;
+   output Q0;
+   output Q1;
+   output Q2;
+   output Q3;
+   output TC;
+   
+   wire OR_CE_L;
+   wire TC_DN;
+   wire TC_UP;
+   wire T1;
+   wire T2;
+   wire T2_DN;
+   wire T2_UP;
+   wire T3;
+   wire T3_DN;
+   wire T3_UP;
+   wire XLXN_1;
+   wire Q0_DUMMY;
+   wire Q1_DUMMY;
+   wire Q2_DUMMY;
+   wire Q3_DUMMY;
+   wire TC_DUMMY;
+   
+   assign Q0 = Q0_DUMMY;
+   assign Q1 = Q1_DUMMY;
+   assign Q2 = Q2_DUMMY;
+   assign Q3 = Q3_DUMMY;
+   assign TC = TC_DUMMY;
+   (* HU_SET = "I_Q0_22" *) 
+   FTCLEX_MXILINX_hex4 #( .INIT(1'b0) ) I_Q0 (.C(C), 
+                             .CE(OR_CE_L), 
+                             .CLR(CLR), 
+                             .D(D0), 
+                             .L(L), 
+                             .T(XLXN_1), 
+                             .Q(Q0_DUMMY));
+   (* HU_SET = "I_Q1_21" *) 
+   FTCLEX_MXILINX_hex4 #( .INIT(1'b0) ) I_Q1 (.C(C), 
+                             .CE(OR_CE_L), 
+                             .CLR(CLR), 
+                             .D(D1), 
+                             .L(L), 
+                             .T(T1), 
+                             .Q(Q1_DUMMY));
+   (* HU_SET = "I_Q2_20" *) 
+   FTCLEX_MXILINX_hex4 #( .INIT(1'b0) ) I_Q2 (.C(C), 
+                             .CE(OR_CE_L), 
+                             .CLR(CLR), 
+                             .D(D2), 
+                             .L(L), 
+                             .T(T2), 
+                             .Q(Q2_DUMMY));
+   (* HU_SET = "I_Q3_19" *) 
+   FTCLEX_MXILINX_hex4 #( .INIT(1'b0) ) I_Q3 (.C(C), 
+                             .CE(OR_CE_L), 
+                             .CLR(CLR), 
+                             .D(D3), 
+                             .L(L), 
+                             .T(T3), 
+                             .Q(Q3_DUMMY));
+   (* HU_SET = "I_TC_25" *) 
+   M2_1_MXILINX_hex4  I_TC (.D0(TC_DN), 
+                           .D1(TC_UP), 
+                           .S0(UP), 
+                           .O(TC_DUMMY));
+   (* HU_SET = "I_T1_26" *) 
+   M2_1B1_MXILINX_hex4  I_T1 (.D0(Q0_DUMMY), 
+                             .D1(Q0_DUMMY), 
+                             .S0(UP), 
+                             .O(T1));
+   (* HU_SET = "I_T2_23" *) 
+   M2_1_MXILINX_hex4  I_T2 (.D0(T2_DN), 
+                           .D1(T2_UP), 
+                           .S0(UP), 
+                           .O(T2));
+   (* HU_SET = "I_T3_24" *) 
+   M2_1_MXILINX_hex4  I_T3 (.D0(T3_DN), 
+                           .D1(T3_UP), 
+                           .S0(UP), 
+                           .O(T3));
+   VCC  I_36_1 (.P(XLXN_1));
+   AND2B2  I_36_3 (.I0(Q1_DUMMY), 
+                  .I1(Q0_DUMMY), 
+                  .O(T2_DN));
+   AND4  I_36_10 (.I0(Q3_DUMMY), 
+                 .I1(Q2_DUMMY), 
+                 .I2(Q1_DUMMY), 
+                 .I3(Q0_DUMMY), 
+                 .O(TC_UP));
+   AND4B4  I_36_11 (.I0(Q3_DUMMY), 
+                   .I1(Q2_DUMMY), 
+                   .I2(Q1_DUMMY), 
+                   .I3(Q0_DUMMY), 
+                   .O(TC_DN));
+   AND3  I_36_15 (.I0(Q2_DUMMY), 
+                 .I1(Q1_DUMMY), 
+                 .I2(Q0_DUMMY), 
+                 .O(T3_UP));
+   AND3B3  I_36_16 (.I0(Q2_DUMMY), 
+                   .I1(Q1_DUMMY), 
+                   .I2(Q0_DUMMY), 
+                   .O(T3_DN));
+   AND2  I_36_37 (.I0(Q1_DUMMY), 
+                 .I1(Q0_DUMMY), 
+                 .O(T2_UP));
+   AND2  I_36_50 (.I0(CE), 
+                 .I1(TC_DUMMY), 
+                 .O(CEO));
+   OR2  I_36_60 (.I0(CE), 
+                .I1(L), 
+                .O(OR_CE_L));
+endmodule
+`timescale 1ns / 1ps
+
+module hex4(clk, 
+            cnt, 
+            data, 
+            load, 
+            reset, 
+            sel, 
+            up, 
+            count);
+
+    input clk;
+    input cnt;
+    input [15:0] data;
+    input load;
+    input reset;
+    input [1:0] sel;
+    input up;
+   output [15:0] count;
+   
+   wire s0;
+   wire s1;
+   wire s2;
+   wire s3;
+   
+   (* HU_SET = "XLXI_12_31" *) 
+   D2_4E_MXILINX_hex4  XLXI_12 (.A0(sel[0]), 
+                               .A1(sel[1]), 
+                               .E(cnt), 
+                               .D0(s0), 
+                               .D1(s1), 
+                               .D2(s2), 
+                               .D3(s3));
+   (* HU_SET = "XLXI_21_27" *) 
+   CB4CLED_MXILINX_hex4  XLXI_21 (.C(clk), 
+                                 .CE(s0), 
+                                 .CLR(reset), 
+                                 .D0(data[0]), 
+                                 .D1(data[1]), 
+                                 .D2(data[2]), 
+                                 .D3(data[3]), 
+                                 .L(load), 
+                                 .UP(up), 
+                                 .CEO(), 
+                                 .Q0(count[0]), 
+                                 .Q1(count[1]), 
+                                 .Q2(count[2]), 
+                                 .Q3(count[3]), 
+                                 .TC());
+   (* HU_SET = "XLXI_36_28" *) 
+   CB4CLED_MXILINX_hex4  XLXI_36 (.C(clk), 
+                                 .CE(s1), 
+                                 .CLR(reset), 
+                                 .D0(data[4]), 
+                                 .D1(data[5]), 
+                                 .D2(data[6]), 
+                                 .D3(data[7]), 
+                                 .L(load), 
+                                 .UP(up), 
+                                 .CEO(), 
+                                 .Q0(count[4]), 
+                                 .Q1(count[5]), 
+                                 .Q2(count[6]), 
+                                 .Q3(count[7]), 
+                                 .TC());
+   (* HU_SET = "XLXI_37_29" *) 
+   CB4CLED_MXILINX_hex4  XLXI_37 (.C(clk), 
+                                 .CE(s2), 
+                                 .CLR(reset), 
+                                 .D0(data[8]), 
+                                 .D1(data[9]), 
+                                 .D2(data[10]), 
+                                 .D3(data[11]), 
+                                 .L(load), 
+                                 .UP(up), 
+                                 .CEO(), 
+                                 .Q0(count[8]), 
+                                 .Q1(count[9]), 
+                                 .Q2(count[10]), 
+                                 .Q3(count[11]), 
+                                 .TC());
+   (* HU_SET = "XLXI_38_30" *) 
+   CB4CLED_MXILINX_hex4  XLXI_38 (.C(clk), 
+                                 .CE(s3), 
+                                 .CLR(reset), 
+                                 .D0(data[12]), 
+                                 .D1(data[13]), 
+                                 .D2(data[14]), 
+                                 .D3(data[15]), 
+                                 .L(load), 
+                                 .UP(up), 
+                                 .CEO(), 
+                                 .Q0(count[12]), 
+                                 .Q1(count[13]), 
+                                 .Q2(count[14]), 
+                                 .Q3(count[15]), 
+                                 .TC());
+endmodule

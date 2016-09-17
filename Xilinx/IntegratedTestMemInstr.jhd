@@ -1,0 +1,5 @@
+MODULE IntegratedTestMemInstr
+	SUBMODULE InstructionRegister
+		INSTANCE XLXI_149
+	SUBMODULE Memory
+		INSTANCE XLXI_174

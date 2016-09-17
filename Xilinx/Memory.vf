@@ -1,0 +1,77 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Memory.vf
+// /___/   /\     Timestamp : 11/12/2015 22:11:37
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IO/ioBlockPart/remote_sources/_/lcdDisplayControl/ipcore_dir -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IO/debounce/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Memory.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Memory.sch
+//Design Name: Memory
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Memory(CLK, 
+              MA, 
+              MW, 
+              MWD, 
+              SP, 
+              MD, 
+              segFault);
+
+    input CLK;
+    input [15:0] MA;
+    input MW;
+    input [15:0] MWD;
+    input [15:0] SP;
+   output [15:0] MD;
+   output segFault;
+   
+   wire [13:0] MemA;
+   
+   BUF  XLXI_8 (.I(MA[5]), 
+               .O(MemA[5]));
+   BUF  XLXI_9 (.I(MA[4]), 
+               .O(MemA[4]));
+   BUF  XLXI_10 (.I(MA[3]), 
+                .O(MemA[3]));
+   BUF  XLXI_11 (.I(MA[2]), 
+                .O(MemA[2]));
+   BUF  XLXI_12 (.I(MA[1]), 
+                .O(MemA[1]));
+   BUF  XLXI_13 (.I(MA[0]), 
+                .O(MemA[0]));
+   BUF  XLXI_14 (.I(MA[8]), 
+                .O(MemA[8]));
+   BUF  XLXI_15 (.I(MA[7]), 
+                .O(MemA[7]));
+   BUF  XLXI_16 (.I(MA[6]), 
+                .O(MemA[6]));
+   BUF  XLXI_47 (.I(MA[9]), 
+                .O(MemA[9]));
+   BUF  XLXI_49 (.I(MA[14]), 
+                .O(MemA[12]));
+   BUF  XLXI_50 (.I(MA[11]), 
+                .O(MemA[11]));
+   BUF  XLXI_51 (.I(MA[10]), 
+                .O(MemA[10]));
+   BUF  XLXI_52 (.I(MA[15]), 
+                .O(MemA[13]));
+   AddressChecker  XLXI_53 (.Addr(MA[15:0]), 
+                           .SP(SP[15:0]), 
+                           .segment(segFault));
+   MainMemoryBlock  XLXI_54 (.addra(MemA[13:0]), 
+                            .clka(CLK), 
+                            .dina(MWD[15:0]), 
+                            .wea(MW), 
+                            .douta(MD[15:0]));
+endmodule

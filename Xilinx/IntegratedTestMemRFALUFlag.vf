@@ -1,0 +1,307 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : IntegratedTestMemRFALUFlag.vf
+// /___/   /\     Timestamp : 11/12/2015 22:11:38
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IO/ioBlockPart/remote_sources/_/lcdDisplayControl/ipcore_dir -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IO/debounce/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestMemRFALUFlag.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestMemRFALUFlag.sch
+//Design Name: IntegratedTestMemRFALUFlag
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Memory_MUSER_IntegratedTestMemRFALUFlag(CLK, 
+                                               MA, 
+                                               MW, 
+                                               MWD, 
+                                               SP, 
+                                               MD, 
+                                               segFault);
+
+    input CLK;
+    input [15:0] MA;
+    input MW;
+    input [15:0] MWD;
+    input [15:0] SP;
+   output [15:0] MD;
+   output segFault;
+   
+   wire [13:0] MemA;
+   
+   BUF  XLXI_8 (.I(MA[5]), 
+               .O(MemA[5]));
+   BUF  XLXI_9 (.I(MA[4]), 
+               .O(MemA[4]));
+   BUF  XLXI_10 (.I(MA[3]), 
+                .O(MemA[3]));
+   BUF  XLXI_11 (.I(MA[2]), 
+                .O(MemA[2]));
+   BUF  XLXI_12 (.I(MA[1]), 
+                .O(MemA[1]));
+   BUF  XLXI_13 (.I(MA[0]), 
+                .O(MemA[0]));
+   BUF  XLXI_14 (.I(MA[8]), 
+                .O(MemA[8]));
+   BUF  XLXI_15 (.I(MA[7]), 
+                .O(MemA[7]));
+   BUF  XLXI_16 (.I(MA[6]), 
+                .O(MemA[6]));
+   BUF  XLXI_47 (.I(MA[9]), 
+                .O(MemA[9]));
+   BUF  XLXI_49 (.I(MA[14]), 
+                .O(MemA[12]));
+   BUF  XLXI_50 (.I(MA[11]), 
+                .O(MemA[11]));
+   BUF  XLXI_51 (.I(MA[10]), 
+                .O(MemA[10]));
+   BUF  XLXI_52 (.I(MA[15]), 
+                .O(MemA[13]));
+   AddressChecker  XLXI_53 (.Addr(MA[15:0]), 
+                           .SP(SP[15:0]), 
+                           .segment(segFault));
+   MainMemoryBlock  XLXI_54 (.addra(MemA[13:0]), 
+                            .clka(CLK), 
+                            .dina(MWD[15:0]), 
+                            .wea(MW), 
+                            .douta(MD[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16CE_MXILINX_IntegratedTestMemRFALUFlag(C, 
+                                                 CE, 
+                                                 CLR, 
+                                                 D, 
+                                                 Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[8]), 
+              .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[9]), 
+              .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[10]), 
+               .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[11]), 
+               .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[12]), 
+               .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[13]), 
+               .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[14]), 
+               .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[15]), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module IntegratedTestMemRFALUFlag(ALUOp, 
+                                  CC, 
+                                  CLK, 
+                                  FU, 
+                                  LM, 
+                                  MA, 
+                                  MW, 
+                                  MWD, 
+                                  Op, 
+                                  PC, 
+                                  RW, 
+                                  RWSrc, 
+                                  r1A, 
+                                  r2A, 
+                                  signE, 
+                                  SrcB, 
+                                  upper, 
+                                  WA, 
+                                  Write, 
+                                  MD, 
+                                  Perform);
+
+    input [2:0] ALUOp;
+    input [2:0] CC;
+    input CLK;
+    input FU;
+    input LM;
+    input [15:0] MA;
+    input MW;
+    input [15:0] MWD;
+    input [3:0] Op;
+    input [15:0] PC;
+    input RW;
+    input [2:0] RWSrc;
+    input [3:0] r1A;
+    input [3:0] r2A;
+    input [15:0] signE;
+    input SrcB;
+    input [15:0] upper;
+    input [3:0] WA;
+    input Write;
+   output [15:0] MD;
+   output Perform;
+   
+   wire [15:0] A;
+   wire [15:0] ALUO;
+   wire [15:0] B;
+   wire gd;
+   wire pos;
+   wire [15:0] SP;
+   wire [15:0] XLXN_94;
+   wire [15:0] XLXN_111;
+   wire [15:0] XLXN_605;
+   wire [15:0] XLXN_637;
+   wire [0:15] XLXN_642;
+   wire [15:0] XLXN_648;
+   wire [15:0] XLXN_653;
+   wire [15:0] XLXN_949;
+   wire [15:0] yvhubyu;
+   wire [15:0] zeroE;
+   wire [15:0] MD_DUMMY;
+   
+   assign XLXN_653 = 16'h1234;
+   assign MD[15:0] = MD_DUMMY[15:0];
+   GND  XLXI_11 (.G(gd));
+   VCC  XLXI_28 (.P(pos));
+   Mux2_1  XLXI_33 (.a(XLXN_94[15:0]), 
+                   .b(XLXN_949[15:0]), 
+                   .s0(SrcB), 
+                   .o(B[15:0]));
+   Mux4_2  XLXI_147 (.D0(B[15:0]), 
+                    .D1(PC[15:0]), 
+                    .D2(upper[15:0]), 
+                    .D3(signE[15:0]), 
+                    .S(RWSrc[2:1]), 
+                    .O(XLXN_605[15:0]));
+   Mux2_1  XLXI_157 (.a(ALUO[15:0]), 
+                    .b(XLXN_605[15:0]), 
+                    .s0(RWSrc[0]), 
+                    .o(XLXN_642[0:15]));
+   ALU  XLXI_167 (.a(A[15:0]), 
+                 .ALUOp(ALUOp[2:0]), 
+                 .b(B[15:0]), 
+                 .ALUOut(XLXN_637[15:0]), 
+                 .Overflow());
+   Flag  XLXI_168 (.ALUOut(XLXN_637[15:0]), 
+                  .CC(CC[2:0]), 
+                  .FU(FU), 
+                  .Op(Op[3:0]), 
+                  .Perform(Perform));
+   (* HU_SET = "XLXI_171_2" *) 
+   FD16CE_MXILINX_IntegratedTestMemRFALUFlag  XLXI_171 (.C(CLK), 
+                                                       .CE(pos), 
+                                                       .CLR(gd), 
+                                                       .D(XLXN_637[15:0]), 
+                                                       .Q(ALUO[15:0]));
+   registerFile  XLXI_172 (.ARGUMENT(XLXN_653[15:0]), 
+                          .CLK(CLK), 
+                          .RESET(gd), 
+                          .RW(RW), 
+                          .RWD(XLXN_642[0:15]), 
+                          .r1A(r1A[3:0]), 
+                          .r2A(r2A[3:0]), 
+                          .WA(WA[3:0]), 
+                          .DISPLAY(), 
+                          .r1D(A[15:0]), 
+                          .r2D(XLXN_111[15:0]));
+   Memory_MUSER_IntegratedTestMemRFALUFlag  XLXI_174 (.CLK(CLK), 
+                                                     .MA(yvhubyu[15:0]), 
+                                                     .MW(MW), 
+                                                     .MWD(XLXN_648[15:0]), 
+                                                     .SP(SP[15:0]), 
+                                                     .MD(MD_DUMMY[15:0]), 
+                                                     .segFault());
+   Mux2_1  XLXI_175 (.a(B[15:0]), 
+                    .b(MA[15:0]), 
+                    .s0(Write), 
+                    .o(yvhubyu[15:0]));
+   Mux2_1  XLXI_176 (.a(A[15:0]), 
+                    .b(MWD[15:0]), 
+                    .s0(Write), 
+                    .o(XLXN_648[15:0]));
+   Mux2_1  XLXI_302 (.a(signE[15:0]), 
+                    .b(zeroE[15:0]), 
+                    .s0(MD_DUMMY[15]), 
+                    .o(XLXN_949[15:0]));
+   delayedMux2_1  XLXI_315 (.a(XLXN_111[15:0]), 
+                           .b(MD_DUMMY[15:0]), 
+                           .CLK(CLK), 
+                           .delayedS(LM), 
+                           .Q(XLXN_94[15:0]));
+endmodule

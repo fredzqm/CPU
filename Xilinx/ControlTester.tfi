@@ -1,0 +1,28 @@
+
+
+
+// Instantiate the module
+ControlTester instance_name (
+    .Op(Op), 
+    .LMC(LMC), 
+    .Perform(Perform), 
+    .PCW(PCW), 
+    .Jump(Jump), 
+    .MW(MW), 
+    .LM(LM), 
+    .IW(IW), 
+    .IorD(IorD), 
+    .MSrc(MSrc), 
+    .RW(RW), 
+    .RWSrc(RWSrc), 
+    .ALUOp(ALUOp), 
+    .SrcB(SrcB), 
+    .FU(FU), 
+    .SPW(SPW), 
+    .SPIorD(SPIorD), 
+    .state(state), 
+    .nextState(nextState), 
+    .error(error)
+    );
+
+

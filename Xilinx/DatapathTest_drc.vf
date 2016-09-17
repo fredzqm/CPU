@@ -1,0 +1,409 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : DatapathTest_drc.vf
+// /___/   /\     Timestamp : 11/09/2015 22:57:50
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IO/ioBlockPart/remote_sources/_/lcdDisplayControl/ipcore_dir -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IO/debounce/ipcore_dir -intstyle ise -family spartan3e -verilog DatapathTest_drc.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/DatapathTest.sch
+//Design Name: DatapathTest
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Memory_MUSER_DatapathTest(CLK, 
+                                 MA, 
+                                 MW, 
+                                 MWD, 
+                                 SP, 
+                                 MD, 
+                                 segFault);
+
+    input CLK;
+    input [15:0] MA;
+    input MW;
+    input [15:0] MWD;
+    input [15:0] SP;
+   output [15:0] MD;
+   output segFault;
+   
+   wire [13:0] MemA;
+   
+   BUF  XLXI_8 (.I(MA[5]), 
+               .O(MemA[5]));
+   BUF  XLXI_9 (.I(MA[4]), 
+               .O(MemA[4]));
+   BUF  XLXI_10 (.I(MA[3]), 
+                .O(MemA[3]));
+   BUF  XLXI_11 (.I(MA[2]), 
+                .O(MemA[2]));
+   BUF  XLXI_12 (.I(MA[1]), 
+                .O(MemA[1]));
+   BUF  XLXI_13 (.I(MA[0]), 
+                .O(MemA[0]));
+   BUF  XLXI_14 (.I(MA[8]), 
+                .O(MemA[8]));
+   BUF  XLXI_15 (.I(MA[7]), 
+                .O(MemA[7]));
+   BUF  XLXI_16 (.I(MA[6]), 
+                .O(MemA[6]));
+   BUF  XLXI_47 (.I(MA[9]), 
+                .O(MemA[9]));
+   BUF  XLXI_49 (.I(MA[14]), 
+                .O(MemA[12]));
+   BUF  XLXI_50 (.I(MA[11]), 
+                .O(MemA[11]));
+   BUF  XLXI_51 (.I(MA[10]), 
+                .O(MemA[10]));
+   BUF  XLXI_52 (.I(MA[15]), 
+                .O(MemA[13]));
+   AddressChecker  XLXI_53 (.Addr(MA[15:0]), 
+                           .SP(SP[15:0]), 
+                           .segment(segFault));
+   MainMemoryBlock  XLXI_54 (.addra(MemA[13:0]), 
+                            .clka(CLK), 
+                            .dina(MWD[15:0]), 
+                            .wea(MW), 
+                            .douta(MD[15:0]));
+endmodule
+`timescale 1ns / 1ps
+
+module FD16CE_MXILINX_DatapathTest(C, 
+                                   CE, 
+                                   CLR, 
+                                   D, 
+                                   Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[8]), 
+              .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[9]), 
+              .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[10]), 
+               .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[11]), 
+               .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[12]), 
+               .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[13]), 
+               .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[14]), 
+               .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[15]), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module DatapathTest(ALUOp, 
+                    CLK, 
+                    FU, 
+                    IorD, 
+                    IW, 
+                    Jump, 
+                    LM, 
+                    MemoryAddress, 
+                    MemoryOperation, 
+                    MemWriteData, 
+                    MSrc, 
+                    MW, 
+                    PCW, 
+                    RegisterAddress, 
+                    RegisterOperation, 
+                    RegWriteData, 
+                    RESET, 
+                    RESETPC, 
+                    RW, 
+                    RWSrc, 
+                    SPIorD, 
+                    SPW, 
+                    SrcB, 
+                    afeafeafeavx, 
+                    display, 
+                    LMC, 
+                    MD, 
+                    Op, 
+                    PC, 
+                    Perform, 
+                    RD, 
+                    SP, 
+                    x, 
+                    y, 
+                    z);
+
+    input [2:0] ALUOp;
+    input CLK;
+    input FU;
+    input IorD;
+    input IW;
+    input Jump;
+    input LM;
+    input [15:0] MemoryAddress;
+    input MemoryOperation;
+    input [15:0] MemWriteData;
+    input MSrc;
+    input MW;
+    input PCW;
+    input [3:0] RegisterAddress;
+    input RegisterOperation;
+    input [15:0] RegWriteData;
+    input RESET;
+    input [15:0] RESETPC;
+    input RW;
+    input [2:0] RWSrc;
+    input SPIorD;
+    input SPW;
+    input SrcB;
+   output [15:0] afeafeafeavx;
+   output [15:0] display;
+   output LMC;
+   output [15:0] MD;
+   output [3:0] Op;
+   output [15:0] PC;
+   output Perform;
+   output [15:0] RD;
+   output [15:0] SP;
+   output [15:0] x;
+   output [3:0] y;
+   output z;
+   
+   wire [15:0] A;
+   wire [15:0] afeavarwgfa;
+   wire [15:0] ALUO;
+   wire [15:0] B;
+   wire [2:0] CC;
+   wire [15:0] EFEFA;
+   wire gd;
+   wire pos;
+   wire [15:0] signE;
+   wire [15:0] upper;
+   wire [15:0] xaefvawreg;
+   wire [0:15] XLXN_11;
+   wire [15:0] XLXN_37;
+   wire [15:0] XLXN_43;
+   wire [15:0] XLXN_179;
+   wire [15:0] XLXN_748;
+   wire [15:0] XLXN_749;
+   wire [3:0] XLXN_752;
+   wire XLXN_760;
+   wire [15:0] XLXN_781;
+   wire [15:0] XLXN_782;
+   wire [3:0] XLXN_806;
+   wire [15:0] XLXN_922;
+   wire [15:0] XLXN_933;
+   wire [15:0] XLXN_941;
+   wire [15:0] zeroE;
+   wire [15:0] PC_DUMMY;
+   wire [3:0] Op_DUMMY;
+   wire [3:0] y_DUMMY;
+   wire [15:0] MD_DUMMY;
+   wire [15:0] SP_DUMMY;
+   wire [15:0] afeafeafeavx_DUMMY;
+   
+   assign XLXN_941 = 16'h0000;
+   assign afeafeafeavx[15:0] = afeafeafeavx_DUMMY[15:0];
+   assign MD[15:0] = MD_DUMMY[15:0];
+   assign Op[3:0] = Op_DUMMY[3:0];
+   assign PC[15:0] = PC_DUMMY[15:0];
+   assign SP[15:0] = SP_DUMMY[15:0];
+   assign y[3:0] = y_DUMMY[3:0];
+   (* HU_SET = "PCRegister_0" *) 
+   FD16CE_MXILINX_DatapathTest  PCRegister (.C(CLK), 
+                                           .CE(XLXN_760), 
+                                           .CLR(gd), 
+                                           .D(XLXN_782[15:0]), 
+                                           .Q(PC_DUMMY[15:0]));
+   Mux2_1  XLXI_7 (.a(XLXN_11[0:15]), 
+                  .b(PC_DUMMY[15:0]), 
+                  .s0(IorD), 
+                  .o(XLXN_749[15:0]));
+   Mux2_1  XLXI_8 (.a(SP_DUMMY[15:0]), 
+                  .b(B[15:0]), 
+                  .s0(MSrc), 
+                  .o(XLXN_11[0:15]));
+   GND  XLXI_9 (.G(gd));
+   VCC  XLXI_28 (.P(pos));
+   Mux2_1  XLXI_33 (.a(B[15:0]), 
+                   .b(XLXN_922[15:0]), 
+                   .s0(SrcB), 
+                   .o(XLXN_933[15:0]));
+   Mux2_1  XLXI_45 (.a(XLXN_179[15:0]), 
+                   .b(B[15:0]), 
+                   .s0(Jump), 
+                   .o(XLXN_781[15:0]));
+   Mux4_2  XLXI_147 (.D0(B[15:0]), 
+                    .D1(PC_DUMMY[15:0]), 
+                    .D2(upper[15:0]), 
+                    .D3(signE[15:0]), 
+                    .S(RWSrc[2:1]), 
+                    .O(xaefvawreg[15:0]));
+   InstructionRegister  XLXI_149 (.EN(IW), 
+                                 .Instruction(MD_DUMMY[15:0]), 
+                                 .CC(CC[2:0]), 
+                                 .LMC(LMC), 
+                                 .Op(Op_DUMMY[3:0]), 
+                                 .r1(XLXN_806[3:0]), 
+                                 .r2(XLXN_752[3:0]), 
+                                 .signE(signE[15:0]), 
+                                 .upper(upper[15:0]), 
+                                 .zeroE());
+   Mux2_1  XLXI_157 (.a(ALUO[15:0]), 
+                    .b(xaefvawreg[15:0]), 
+                    .s0(RWSrc[0]), 
+                    .o(afeavarwgfa[15:0]));
+   ALU  XLXI_167 (.a(A[15:0]), 
+                 .ALUOp(ALUOp[2:0]), 
+                 .b(XLXN_933[15:0]), 
+                 .ALUOut(ALUO[15:0]), 
+                 .Overflow());
+   Flag  XLXI_168 (.ALUOut(ALUO[15:0]), 
+                  .CC(CC[2:0]), 
+                  .FU(FU), 
+                  .Op(Op_DUMMY[3:0]), 
+                  .Perform(Perform));
+   PCAdder  XLXI_184 (.PC(PC_DUMMY[15:0]), 
+                     .PCinc(XLXN_179[15:0]));
+   SPAdder  XLXI_190 (.IorD(SPIorD), 
+                     .SP(SP_DUMMY[15:0]), 
+                     .newSP(XLXN_43[15:0]));
+   SP  XLXI_203 (.CE(SPW), 
+                .CLK(CLK), 
+                .newSP(XLXN_43[15:0]), 
+                .PRESET(RESET), 
+                .SP(SP_DUMMY[15:0]));
+   GND  XLXI_206 (.G());
+   Mux2_1  XLXI_208 (.a(XLXN_781[15:0]), 
+                    .b(RESETPC[15:0]), 
+                    .s0(RESET), 
+                    .o(XLXN_782[15:0]));
+   Mux2_1  XLXI_214 (.a(A[15:0]), 
+                    .b(MemWriteData[15:0]), 
+                    .s0(MemoryOperation), 
+                    .o(XLXN_37[15:0]));
+   Mux2_1  XLXI_224 (.a(XLXN_749[15:0]), 
+                    .b(MemoryAddress[15:0]), 
+                    .s0(MemoryOperation), 
+                    .o(XLXN_748[15:0]));
+   Mux2_1_4bit  XLXI_280 (.a(XLXN_806[3:0]), 
+                         .b(RegisterAddress[3:0]), 
+                         .s0(RegisterOperation), 
+                         .o(y_DUMMY[3:0]));
+   Memory_MUSER_DatapathTest  XLXI_281 (.CLK(CLK), 
+                                       .MA(XLXN_748[15:0]), 
+                                       .MW(MW), 
+                                       .MWD(XLXN_37[15:0]), 
+                                       .SP(SP_DUMMY[15:0]), 
+                                       .MD(MD_DUMMY[15:0]), 
+                                       .segFault());
+   OR2  XLXI_282 (.I0(PCW), 
+                 .I1(RESET), 
+                 .O(XLXN_760));
+   Mux2_1  XLXI_284 (.a(afeavarwgfa[15:0]), 
+                    .b(RegWriteData[15:0]), 
+                    .s0(RegisterOperation), 
+                    .o(afeafeafeavx_DUMMY[15:0]));
+   BUF  XLXI_287 (.I(RW), 
+                 .O(z));
+   Mux2_1  XLXI_302 (.a(signE[15:0]), 
+                    .b(zeroE[15:0]), 
+                    .s0(Op_DUMMY[3]), 
+                    .o(XLXN_922[15:0]));
+   Buff16  XLXI_311 (.a(A[15:0]), 
+                    .b(RD[15:0]));
+   delayedMux2_1  XLXI_315 (.a(EFEFA[15:0]), 
+                           .b(MD_DUMMY[15:0]), 
+                           .CLK(CLK), 
+                           .delayedS(LM), 
+                           .Q(B[15:0]));
+   Buff16  XLXI_316 (.a(B[15:0]), 
+                    .b(x[15:0]));
+   registerFile  XLXI_320 (.ARGUMENT(XLXN_941[15:0]), 
+                          .CLK(CLK), 
+                          .RESET(gd), 
+                          .RW(RW), 
+                          .RWD(afeafeafeavx_DUMMY[15:0]), 
+                          .r1A(y_DUMMY[3:0]), 
+                          .r2A(XLXN_752[3:0]), 
+                          .WA(y_DUMMY[3:0]), 
+                          .DISPLAY(display[15:0]), 
+                          .r1D(A[15:0]), 
+                          .r2D(EFEFA[15:0]));
+endmodule

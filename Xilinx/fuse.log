@@ -1,0 +1,68 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/MemoryInitialData_tb_isim_beh.exe -prj /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/MemoryInitialData_tb_beh.prj work.MemoryInitialData_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Mux2_1.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir/MainMemoryBlock.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/AddressChecker.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/SPAdder.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/SP.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/RegisterFile.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/PCAdder.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Mux4_2.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Mux2_1_4bit.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Memory.vf" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/InstructionRegister.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Flag.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/DelayedMux2_1.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/Buff16.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ALU.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/DatapathTest.vf" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ControlUnitFast.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/SystemTest/SystemTest.v" into library work
+Analyzing Verilog file "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/MemoryInitialData_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "/home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/SystemTest/SystemTest.v" Line 53: Port vx is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 96356 KB
+Fuse CPU Usage: 960 ms
+Compiling module FDCE
+Compiling module FD16CE_MXILINX_DatapathTest
+Compiling module Mux2_1
+Compiling module GND
+Compiling module VCC
+Compiling module Mux4_2
+Compiling module InstructionRegister
+Compiling module ALU
+Compiling module Flag
+Compiling module PCAdder
+Compiling module SPAdder
+Compiling module SP
+Compiling module Mux2_1_4bit
+Compiling module BUF
+Compiling module AddressChecker
+Compiling module BLK_MEM_GEN_V7_3_output_stage(C_...
+Compiling module BLK_MEM_GEN_V7_3_softecc_output_...
+Compiling module BLK_MEM_GEN_V7_3_mem_module(C_CO...
+Compiling module BLK_MEM_GEN_V7_3(C_FAMILY="spart...
+Compiling module MainMemoryBlock
+Compiling module Memory
+Compiling module OR2
+Compiling module Buff16
+Compiling module delayedMux2_1
+Compiling module registerFile
+Compiling module AND2
+Compiling module DatapathTest
+Compiling module ControlUnitFast
+Compiling module SystemTest
+Compiling module MemoryInitialData_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 2 sub-compilation(s) to finish...
+Compiled 31 Verilog Units
+Built simulation executable /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/MemoryInitialData_tb_isim_beh.exe
+Fuse Memory Usage: 1184172 KB
+Fuse CPU Usage: 1100 ms
+GCC CPU Usage: 2580 ms

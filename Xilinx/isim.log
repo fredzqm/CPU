@@ -1,0 +1,67 @@
+ISim log file
+Running: /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/MemoryInitialData_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/MemoryInitialData_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+----------------------------------------------------------------------
+INFO:Security:50 - The XILINXD_LICENSE_FILE environment variable is set to '2100@clive.csse.rose-hulman.edu'.
+INFO:Security:53 - The LM_LICENSE_FILE environment variable is not set.
+WARNING:Security:43 - No license file was found in the standard Xilinx license directory.
+WARNING:Security:44 - Since no license file was found,
+       please run the Xilinx License Configuration Manager
+       (xlcm or "Manage Xilinx Licenses")
+       to assist in obtaining a license.
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+ Block Memory Generator CORE Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator CORE Generator module MemoryInitialData_tb.uut.UUT.XLXI_281.XLXI_54.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Finished circuit initialization process.
+105 Memory read,   Mem[0000] = ae07
+111 Memory read,   Mem[0001] = fe0f
+117 Memory read,   Mem[0002] = 0005
+123 Memory read,   Mem[0003] = f007
+129 Memory read,   Mem[0004] = 0004
+135 Memory read,   Mem[0005] = ae07
+141 Memory read,   Mem[0006] = a807
+147 Memory read,   Mem[0007] = a907
+153 Memory read,   Mem[0008] = ac07
+159 Memory read,   Mem[0009] = 6807
+165 Memory read,   Mem[000a] = 7902
+171 Memory read,   Mem[000b] = 7c01
+177 Memory read,   Mem[000c] = 6087
+183 Memory read,   Mem[000d] = 6197
+189 Memory read,   Mem[000e] = fe0f
+195 Memory read,   Mem[000f] = 001a
+201 Memory read,   Mem[0010] = 5ac7
+207 Memory read,   Mem[0011] = 09c5
+213 Memory read,   Mem[0012] = f005
+219 Memory read,   Mem[0013] = 000c
+225 Memory read,   Mem[0014] = 6a97
+231 Memory read,   Mem[0015] = bc07
+237 Memory read,   Mem[0016] = b907
+243 Memory read,   Mem[0017] = b807
+249 Memory read,   Mem[0018] = be07
+255 Memory read,   Mem[0019] = e0e7
+261 Memory read,   Mem[001a] = 7700
+267 Memory read,   Mem[001b] = 5077
+273 Memory read,   Mem[001c] = 6a12
+279 Memory read,   Mem[001d] = e0e2
+285 Memory read,   Mem[001e] = 5177
+291 Memory read,   Mem[001f] = f002
+297 Memory read,   Mem[0020] = 0027
+303 Memory read,   Mem[0021] = 5017
+309 Memory read,   Mem[0022] = 4011
+315 Memory read,   Mem[0023] = 4106
+321 Memory read,   Mem[0024] = 5177
+327 Memory read,   Mem[0025] = f005
+333 Memory read,   Mem[0026] = 0021
+339 Memory read,   Mem[0027] = 6a07
+345 Memory read,   Mem[0028] = e0e7
+# exit 0

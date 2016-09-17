@@ -1,0 +1,5 @@
+MODULE Memory
+	SUBMODULE AddressChecker
+		INSTANCE XLXI_53
+	SUBMODULE MainMemoryBlock
+		INSTANCE XLXI_54

@@ -1,0 +1,18 @@
+
+
+
+// Instantiate the module
+InstructionRegister instance_name (
+    .Instruction(Instruction), 
+    .IW(IW), 
+    .CLK(CLK), 
+    .r1(r1), 
+    .r2(r2), 
+    .Op(Op), 
+    .LMC(LMC), 
+    .CC(CC), 
+    .signE(signE), 
+    .upper(upper)
+    );
+
+

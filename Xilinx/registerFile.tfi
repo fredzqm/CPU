@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+registerFile instance_name (
+    .r1A(r1A), 
+    .r2A(r2A), 
+    .WA(WA), 
+    .RWD(RWD), 
+    .RW(RW), 
+    .CLK(CLK), 
+    .r1D(r1D), 
+    .r2D(r2D)
+    );
+
+

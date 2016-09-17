@@ -1,0 +1,62 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : IntegratedTestIR_Flag.vf
+// /___/   /\     Timestamp : 11/08/2015 19:18:14
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestIR_Flag.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTest/IntegratedTestIR_Flag.sch
+//Design Name: IntegratedTestIR_Flag
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module IntegratedTestIR_Flag(ALUOut, 
+                             CLK, 
+                             FU, 
+                             IW, 
+                             MD, 
+                             LMC, 
+                             Op, 
+                             Perform);
+
+    input [15:0] ALUOut;
+    input CLK;
+    input FU;
+    input IW;
+    input [15:0] MD;
+   output LMC;
+   output [3:0] Op;
+   output Perform;
+   
+   wire [2:0] CC;
+   wire [15:0] signE;
+   wire [15:0] upper;
+   wire [3:0] Op_DUMMY;
+   
+   assign Op[3:0] = Op_DUMMY[3:0];
+   Flag  XLXI_168 (.ALUOut(ALUOut[15:0]), 
+                  .CC(CC[2:0]), 
+                  .FU(FU), 
+                  .Op(Op_DUMMY[3:0]), 
+                  .Perform(Perform));
+   InstructionRegister  XLXI_169 (.CLK(CLK), 
+                                 .Instruction(MD[15:0]), 
+                                 .IW(IW), 
+                                 .CC(CC[2:0]), 
+                                 .LMC(LMC), 
+                                 .Op(Op_DUMMY[3:0]), 
+                                 .r1(), 
+                                 .r2(), 
+                                 .signE(signE[15:0]), 
+                                 .upper(upper[15:0]));
+endmodule

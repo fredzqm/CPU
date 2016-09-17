@@ -1,0 +1,11 @@
+
+
+
+// Instantiate the module
+Decoder4_16 instance_name (
+    .A(A), 
+    .EN(EN), 
+    .D(D)
+    );
+
+

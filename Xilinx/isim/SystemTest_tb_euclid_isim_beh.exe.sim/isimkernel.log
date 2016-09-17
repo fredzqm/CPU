@@ -1,0 +1,28 @@
+Command line:
+   SystemTest_tb_euclid_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60523
+
+Fri Nov 13 08:48:30 2015
+
+
+ Elaboration Time: 0.02 sec
+
+ Current Memory Usage: 241.246 Meg
+
+ Total Signals          : 584
+ Total Nets             : 1329
+ Total Signal Drivers   : 217
+ Total Blocks           : 92
+ Total Primitive Blocks : 83
+ Total Processes        : 304
+ Total Traceable Variables  : 407
+ Total Scalar Nets and Variables : 347184
+
+ Total Simulation Time: 6.33 sec
+
+ Current Memory Usage: 316.748 Meg
+
+Fri Nov 13 08:59:44 2015
+

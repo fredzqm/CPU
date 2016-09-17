@@ -1,0 +1,195 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : IntegratedTestRF_ALU.vf
+// /___/   /\     Timestamp : 11/04/2015 12:26:32
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestRF_ALU.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestRF_ALU.sch
+//Design Name: IntegratedTestRF_ALU
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FD16CE_MXILINX_IntegratedTestRF_ALU(C, 
+                                           CE, 
+                                           CLR, 
+                                           D, 
+                                           Q);
+
+    input C;
+    input CE;
+    input CLR;
+    input [15:0] D;
+   output [15:0] Q;
+   
+   
+   FDCE #( .INIT(1'b0) ) I_Q0 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[0]), 
+              .Q(Q[0]));
+   FDCE #( .INIT(1'b0) ) I_Q1 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[1]), 
+              .Q(Q[1]));
+   FDCE #( .INIT(1'b0) ) I_Q2 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[2]), 
+              .Q(Q[2]));
+   FDCE #( .INIT(1'b0) ) I_Q3 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[3]), 
+              .Q(Q[3]));
+   FDCE #( .INIT(1'b0) ) I_Q4 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[4]), 
+              .Q(Q[4]));
+   FDCE #( .INIT(1'b0) ) I_Q5 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[5]), 
+              .Q(Q[5]));
+   FDCE #( .INIT(1'b0) ) I_Q6 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[6]), 
+              .Q(Q[6]));
+   FDCE #( .INIT(1'b0) ) I_Q7 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[7]), 
+              .Q(Q[7]));
+   FDCE #( .INIT(1'b0) ) I_Q8 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[8]), 
+              .Q(Q[8]));
+   FDCE #( .INIT(1'b0) ) I_Q9 (.C(C), 
+              .CE(CE), 
+              .CLR(CLR), 
+              .D(D[9]), 
+              .Q(Q[9]));
+   FDCE #( .INIT(1'b0) ) I_Q10 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[10]), 
+               .Q(Q[10]));
+   FDCE #( .INIT(1'b0) ) I_Q11 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[11]), 
+               .Q(Q[11]));
+   FDCE #( .INIT(1'b0) ) I_Q12 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[12]), 
+               .Q(Q[12]));
+   FDCE #( .INIT(1'b0) ) I_Q13 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[13]), 
+               .Q(Q[13]));
+   FDCE #( .INIT(1'b0) ) I_Q14 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[14]), 
+               .Q(Q[14]));
+   FDCE #( .INIT(1'b0) ) I_Q15 (.C(C), 
+               .CE(CE), 
+               .CLR(CLR), 
+               .D(D[15]), 
+               .Q(Q[15]));
+endmodule
+`timescale 1ns / 1ps
+
+module IntegratedTestRF_ALU(ALUOp, 
+                            CLK, 
+                            LM, 
+                            MD, 
+                            RA1, 
+                            RA2, 
+                            RW, 
+                            RWD, 
+                            signE, 
+                            SrcB, 
+                            WA, 
+                            ALUO);
+
+    input [2:0] ALUOp;
+    input CLK;
+    input LM;
+    input [15:0] MD;
+    input [3:0] RA1;
+    input [3:0] RA2;
+    input RW;
+    input [15:0] RWD;
+    input [15:0] signE;
+    input SrcB;
+    input [3:0] WA;
+   output [15:0] ALUO;
+   
+   wire [15:0] A;
+   wire [15:0] B;
+   wire gd;
+   wire pos;
+   wire [15:0] XLXN_70;
+   wire [15:0] XLXN_90;
+   wire [15:0] XLXN_94;
+   wire [15:0] XLXN_111;
+   
+   GND  XLXI_11 (.G(gd));
+   (* HU_SET = "XLXI_19_1" *) 
+   FD16CE_MXILINX_IntegratedTestRF_ALU  XLXI_19 (.C(CLK), 
+                                                .CE(pos), 
+                                                .CLR(gd), 
+                                                .D(XLXN_70[15:0]), 
+                                                .Q(A[15:0]));
+   (* HU_SET = "XLXI_23_0" *) 
+   FD16CE_MXILINX_IntegratedTestRF_ALU  XLXI_23 (.C(CLK), 
+                                                .CE(pos), 
+                                                .CLR(gd), 
+                                                .D(XLXN_90[15:0]), 
+                                                .Q(XLXN_94[15:0]));
+   Mux2_1  XLXI_27 (.a(XLXN_111[15:0]), 
+                   .b(MD[15:0]), 
+                   .s0(LM), 
+                   .o(XLXN_90[15:0]));
+   VCC  XLXI_28 (.P(pos));
+   Mux2_1  XLXI_33 (.a(XLXN_94[15:0]), 
+                   .b(signE[15:0]), 
+                   .s0(SrcB), 
+                   .o(B[15:0]));
+   ALU  XLXI_167 (.a(A[15:0]), 
+                 .ALUOp(ALUOp[2:0]), 
+                 .b(B[15:0]), 
+                 .ALUOut(ALUO[15:0]), 
+                 .Overflow());
+   (* HU_SET = "XLXI_171_2" *) 
+   FD16CE_MXILINX_IntegratedTestRF_ALU  XLXI_171 (.C(), 
+                                                 .CE(), 
+                                                 .CLR(), 
+                                                 .D(), 
+                                                 .Q());
+   registerFile  XLXI_172 (.CLK(CLK), 
+                          .RW(RW), 
+                          .RWD(RWD[15:0]), 
+                          .r1A(RA1[3:0]), 
+                          .r2A(RA2[3:0]), 
+                          .WA(WA[3:0]), 
+                          .r1D(XLXN_70[15:0]), 
+                          .r2D(XLXN_111[15:0]));
+endmodule

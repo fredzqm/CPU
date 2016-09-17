@@ -1,0 +1,93 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : IntegratedTestIR_RF.vf
+// /___/   /\     Timestamp : 11/08/2015 19:18:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestIR_RF.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTest/IntegratedTestIR_RF.sch
+//Design Name: IntegratedTestIR_RF
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module IntegratedTestIR_RF(ALUO, 
+                           B, 
+                           CLK, 
+                           IW, 
+                           MD, 
+                           PC, 
+                           RW, 
+                           RWSrc, 
+                           CC, 
+                           D1, 
+                           D2, 
+                           LMC, 
+                           Op, 
+                           signE, 
+                           upper);
+
+    input [15:0] ALUO;
+    input [15:0] B;
+    input CLK;
+    input IW;
+    input [15:0] MD;
+    input [15:0] PC;
+    input RW;
+    input [2:0] RWSrc;
+   output [2:0] CC;
+   output [15:0] D1;
+   output [15:0] D2;
+   output LMC;
+   output [3:0] Op;
+   output [15:0] signE;
+   output [15:0] upper;
+   
+   wire [3:0] XLXN_68;
+   wire [3:0] XLXN_69;
+   wire [15:0] XLXN_605;
+   wire [0:15] XLXN_642;
+   wire [15:0] signE_DUMMY;
+   wire [15:0] upper_DUMMY;
+   
+   assign signE[15:0] = signE_DUMMY[15:0];
+   assign upper[15:0] = upper_DUMMY[15:0];
+   Mux4_2  XLXI_147 (.D0(B[15:0]), 
+                    .D1(PC[15:0]), 
+                    .D2(upper_DUMMY[15:0]), 
+                    .D3(signE_DUMMY[15:0]), 
+                    .S(RWSrc[2:1]), 
+                    .O(XLXN_605[15:0]));
+   Mux2_1  XLXI_157 (.a(ALUO[15:0]), 
+                    .b(XLXN_605[15:0]), 
+                    .s0(RWSrc[0]), 
+                    .o(XLXN_642[0:15]));
+   registerFile  XLXI_158 (.CLK(CLK), 
+                          .RW(RW), 
+                          .RWD(XLXN_642[0:15]), 
+                          .r1A(XLXN_68[3:0]), 
+                          .r2A(XLXN_69[3:0]), 
+                          .WA(XLXN_68[3:0]), 
+                          .display(), 
+                          .r1D(D1[15:0]), 
+                          .r2D(D2[15:0]));
+   InstructionRegister  XLXI_159 (.CLK(CLK), 
+                                 .Instruction(MD[15:0]), 
+                                 .IW(IW), 
+                                 .CC(CC[2:0]), 
+                                 .LMC(LMC), 
+                                 .Op(Op[3:0]), 
+                                 .r1(XLXN_68[3:0]), 
+                                 .r2(XLXN_69[3:0]), 
+                                 .signE(signE_DUMMY[15:0]), 
+                                 .upper(upper_DUMMY[15:0]));
+endmodule

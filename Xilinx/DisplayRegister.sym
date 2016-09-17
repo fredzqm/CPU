@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="DisplayRegister">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2015-11-10T1:21:17</timestamp>
+    <attr value="DisplayRegister" name="VeriModel" />
+    <pin polarity="Input" x="0" y="-480" name="execute" />
+    <pin polarity="Input" x="0" y="-416" name="RESET" />
+    <pin polarity="Input" x="0" y="-352" name="CLK" />
+    <pin polarity="Input" x="0" y="-288" name="moveLeftDec" />
+    <pin polarity="Input" x="0" y="-224" name="moveRightDec" />
+    <pin polarity="Input" x="0" y="-160" name="inc" />
+    <pin polarity="Input" x="0" y="-96" name="dec" />
+    <pin polarity="Input" x="0" y="-32" name="CPUOutput(15:0)" />
+    <pin polarity="Output" x="512" y="-480" name="curDec(4:0)" />
+    <pin polarity="Output" x="512" y="-32" name="displayValue(15:0)" />
+    <graph>
+        <rect width="384" x="64" y="-512" height="512" />
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="256" y="-520" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-480" type="pin execute" />
+        <line x2="0" y1="-480" y2="-480" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-416" type="pin RESET" />
+        <line x2="0" y1="-416" y2="-416" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin CLK" />
+        <line x2="0" y1="-352" y2="-352" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin moveLeftDec" />
+        <line x2="0" y1="-288" y2="-288" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin moveRightDec" />
+        <line x2="0" y1="-224" y2="-224" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin inc" />
+        <line x2="0" y1="-160" y2="-160" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin dec" />
+        <line x2="0" y1="-96" y2="-96" x1="64" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin CPUOutput(15:0)" />
+        <rect width="64" x="0" y="-44" height="24" />
+        <line x2="0" y1="-32" y2="-32" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-480" type="pin curDec(4:0)" />
+        <rect width="64" x="448" y="-492" height="24" />
+        <line x2="512" y1="-480" y2="-480" x1="448" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="440" y="-32" type="pin displayValue(15:0)" />
+        <rect width="64" x="448" y="-44" height="24" />
+        <line x2="512" y1="-32" y2="-32" x1="448" />
+    </graph>
+</symbol>

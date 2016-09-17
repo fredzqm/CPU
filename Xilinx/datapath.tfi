@@ -1,0 +1,29 @@
+// Verilog instantiation template created from schematic /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/datapath.sch - Sun Nov  8 19:49:15 2015
+//
+// Notes: 
+// To use this template to instantiate this component,cut-and-paste and then edit
+//
+// Instantiate the UUT
+   datapath UUT (
+		.CLK(    ), 
+		.IW(    ), 
+		.Op(    ), 
+		.LMC(    ), 
+		.ALUOp(    ), 
+		.SrcB(    ), 
+		.Perform(    ), 
+		.FU(    ), 
+		.RW(    ), 
+		.MW(    ), 
+		.RWSrc(    ), 
+		.PCW(    ), 
+		.IorD(    ), 
+		.MSrc(    ), 
+		.SPW(    ), 
+		.SPIorD(    ), 
+		.RESET(    ), 
+		.Jump(    ), 
+		.RESETPC(    ), 
+		.DisplayRegister(    ), 
+		.LM(    )
+   );

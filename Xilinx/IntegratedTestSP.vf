@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : IntegratedTestSP.vf
+// /___/   /\     Timestamp : 11/08/2015 14:44:12
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -sympath /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/ipcore_dir -intstyle ise -family spartan3e -verilog /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestSP.vf -w /home/fredzqm/cpu-csse232/1516a-csse232-fineral-kerrickm-yangr-zhangq2/Xilinx/IntegratedTestSP.sch
+//Design Name: IntegratedTestSP
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module IntegratedTestSP(CLK, 
+                        RESET, 
+                        SPIorD, 
+                        SPW, 
+                        SP);
+
+    input CLK;
+    input RESET;
+    input SPIorD;
+    input SPW;
+   output [15:0] SP;
+   
+   wire [15:0] XLXN_43;
+   wire [15:0] SP_DUMMY;
+   
+   assign SP[15:0] = SP_DUMMY[15:0];
+   SPAdder  XLXI_190 (.IorD(SPIorD), 
+                     .SP(SP_DUMMY[15:0]), 
+                     .newSP(XLXN_43[15:0]));
+   SP  XLXI_203 (.CE(SPW), 
+                .CLK(CLK), 
+                .newSP(XLXN_43[15:0]), 
+                .PRESET(RESET), 
+                .SP(SP_DUMMY[15:0]));
+endmodule
